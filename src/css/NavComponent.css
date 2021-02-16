@@ -1,0 +1,31 @@
+.navbar{
+  background-color: none;
+  position: fixed;
+  width: 100%;
+  z-index: 3;
+  -webkit-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 14px 32px 0px rgba(0, 0, 0, 0.5);
+}
+
+.nav-link{
+  color:  rgba(22,160,133) !important;
+  font-weight: bolder;
+}
+
+.nav-link:hover{
+  color:black !important;
+  border-bottom:2px solid black ;
+}
+
+.nav-item .active{
+  color:black !important;
+}
+
+.navbar-collapse{
+flex-grow: 0 !important;
+}
+
+.NavbarToggler{
+background-color:rgba(22,160,133) ;
+}

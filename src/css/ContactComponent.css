@@ -1,0 +1,10 @@
+.contactbg{
+    height: 100vh;
+    background-color: #f1fcb6;
+    z-index: 1;
+}
+
+.contact{
+    padding-left: 10vw;
+    padding-top: 20vh;
+}
