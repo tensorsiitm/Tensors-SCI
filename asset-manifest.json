@@ -1,26 +1,28 @@
 {
   "files": {
-    "main.css": "/Tensors-SCI/static/css/main.92a08491.chunk.css",
-    "main.js": "/Tensors-SCI/static/js/main.14abd7c1.chunk.js",
-    "main.js.map": "/Tensors-SCI/static/js/main.14abd7c1.chunk.js.map",
+    "main.css": "/Tensors-SCI/static/css/main.9358c249.chunk.css",
+    "main.js": "/Tensors-SCI/static/js/main.148a1b9b.chunk.js",
+    "main.js.map": "/Tensors-SCI/static/js/main.148a1b9b.chunk.js.map",
     "runtime-main.js": "/Tensors-SCI/static/js/runtime-main.fea4f91d.js",
     "runtime-main.js.map": "/Tensors-SCI/static/js/runtime-main.fea4f91d.js.map",
     "static/css/2.150d169a.chunk.css": "/Tensors-SCI/static/css/2.150d169a.chunk.css",
-    "static/js/2.a7cab712.chunk.js": "/Tensors-SCI/static/js/2.a7cab712.chunk.js",
-    "static/js/2.a7cab712.chunk.js.map": "/Tensors-SCI/static/js/2.a7cab712.chunk.js.map",
+    "static/js/2.3c800c4a.chunk.js": "/Tensors-SCI/static/js/2.3c800c4a.chunk.js",
+    "static/js/2.3c800c4a.chunk.js.map": "/Tensors-SCI/static/js/2.3c800c4a.chunk.js.map",
     "index.html": "/Tensors-SCI/index.html",
     "static/css/2.150d169a.chunk.css.map": "/Tensors-SCI/static/css/2.150d169a.chunk.css.map",
-    "static/css/main.92a08491.chunk.css.map": "/Tensors-SCI/static/css/main.92a08491.chunk.css.map",
-    "static/js/2.a7cab712.chunk.js.LICENSE.txt": "/Tensors-SCI/static/js/2.a7cab712.chunk.js.LICENSE.txt",
-    "static/media/Pacifico-Regular.93cd59ff.ttf": "/Tensors-SCI/static/media/Pacifico-Regular.93cd59ff.ttf",
+    "static/css/main.9358c249.chunk.css.map": "/Tensors-SCI/static/css/main.9358c249.chunk.css.map",
+    "static/js/2.3c800c4a.chunk.js.LICENSE.txt": "/Tensors-SCI/static/js/2.3c800c4a.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/Tensors-SCI/static/media/Pacifico-Regular.93cd59ff.ttf",
     "static/media/Home-homeComponent.css": "/Tensors-SCI/static/media/bl5.fac6a3d9.jpg",
-    "static/media/tensors.dd6752a8.png": "/Tensors-SCI/static/media/tensors.dd6752a8.png"
+    "static/media/Mainproj1-homeComponent.css": "/Tensors-SCI/static/media/wave2.8a9aadde.svg",
+    "static/media/tensors.dd6752a8.png": "/Tensors-SCI/static/media/tensors.dd6752a8.png",
+    "static/media/About-homeComponent.css": "/Tensors-SCI/static/media/wave1.1fe0ec26.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.fea4f91d.js",
     "static/css/2.150d169a.chunk.css",
-    "static/js/2.a7cab712.chunk.js",
-    "static/css/main.92a08491.chunk.css",
-    "static/js/main.14abd7c1.chunk.js"
+    "static/js/2.3c800c4a.chunk.js",
+    "static/css/main.9358c249.chunk.css",
+    "static/js/main.148a1b9b.chunk.js"
   ]
 }
