@@ -24,13 +24,17 @@ class Homehome extends Component{
             }
                   
             listenToScroll = () => {
-                        let scrollTop = window.scrollY,
-                        minrad = 0,
-                        circlerad = Math.max(minrad, 1750 - 2.3*scrollTop);
-                        this.setState({
-                                circlerad: circlerad
-                        });
-                        console.log({scrollTop})
+                        const scrollTop = window.scrollY;
+                        const h1 = document.getElementById('home').clientHeight;
+                        const cr = (1.13-(scrollTop/h1))*100;
+                        console.log(scrollTop/h1 + "perc")
+                        console.log(cr + "rad")
+                        document.getElementById("go1").style.width = `${cr}%`;
+                        // minrad = 0,
+                        // circlerad = Math.max(minrad, 1750 - 2.3*scrollTop);
+                        // this.setState({
+                        //         circlerad: circlerad
+                        // });
                       let currentScrollPos = window.pageYOffset;
                       let maxScroll =  window.innerHeight;
                       if (currentScrollPos > 50 ) {
@@ -41,17 +45,16 @@ class Homehome extends Component{
                         this.setState({ opacityt: "1"  
                                      })
                       }
-                      if(currentScrollPos+10 > maxScroll){
+                      if(currentScrollPos+20 > maxScroll){
                         this.setState({ display: "none",    
                                      }) 
                       }
                       else{
                         this.setState({ display: "block",    
-                                     }) 
+                                     })
+                                     document.getElementById("navbar").style.backgroundColor="none"; 
                       }
                      
-                      console.log({currentScrollPos})
-                      console.log({maxScroll})
                     }
 
                 toggleClass =()=> {
@@ -74,8 +77,8 @@ class Homehome extends Component{
             <li><span></span></li>
             </ul>
         </div>
-            <div className="greenoverlay1" style={{height: `${this.state.circlerad}px`, width: `${this.state.circlerad}px`, display: `${this.state.display}`}}></div>
-            <div className="row darkoverlay">
+            <div className="greenoverlay1" id="go1" style={{ display: `${this.state.display}`}}></div>
+            <div className="row darkoverlay" id="home">
             <div className="col text-center">
             <div className="row tensors">
             <div className="col h-30" style={{ opacity: `${this.state.opacityt}`}}>

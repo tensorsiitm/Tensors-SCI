@@ -13,7 +13,8 @@ body{
       width: 100%;
       height: 100vh;
       left: 0px;
-      z-index: 0; 
+      z-index: 0;
+      
   }
   
   .slideshow li span { 
@@ -72,12 +73,18 @@ body{
 
 .greenoverlay1{
     border-radius: 50%;
-    box-shadow: 0px 0px 100px 99999px #A9E7DA;
+    box-shadow: 0px 0px 100px 99999px #9cff62;
     position: fixed;
     top: 50%;
     left:50%;
     transform: translate(-50%, -50%);
     z-index: 2;
+}
+
+.greenoverlay1:before{
+  content: "";
+  display: block;
+  padding-top: 100%;
 }
 
 

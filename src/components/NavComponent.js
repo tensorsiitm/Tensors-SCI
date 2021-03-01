@@ -1,7 +1,6 @@
 import React, { Component} from 'react';
 import '../css/NavComponent.css';
 import { Navbar, NavbarBrand, Nav, NavbarToggler, Collapse, NavItem } from 'reactstrap';
-import { NavLink } from 'react-router-dom';
 import ico from "../assets/images/T.png";
 
 class Top extends Component{
@@ -20,30 +19,42 @@ class Top extends Component{
           isNavOpen: !this.state.isNavOpen
         });
       }
+
+      scrollTo(e){
+          const k = e.target.id.split('#')[1]
+
+
+          window.scrollTo({
+              top:document.getElementById(`${k}`).offsetTop,
+              behavior: 'smooth',
+          })
+          
+      }
+
     render(){
         return(
             <React.Fragment>
-                <Navbar dark className="navbar" expand="md">
+                <Navbar dark className="navbar" expand="md" id="navbar">
                     <div className="container">
                         
-                        <NavbarBrand className="mr-auto" href="/#/home"><img src={ico} height="35px"/></NavbarBrand>
+                        <NavbarBrand className="mr-auto" id="#home"><img src={ico} height="35px"/></NavbarBrand>
                         <NavbarToggler className="NavbarToggler" onClick={this.toggleNav} />
                         <Collapse isOpen={this.state.isNavOpen} navbar>
-                            <Nav navbar classNam="navleft">
+                            <Nav navbar className="navleft">
                                 <NavItem>
-                                    <NavLink className="nav-link"  to='/home'> HOME</NavLink>
+                                    <a className="nav-link"  id='#home' onClick={this.scrollTo}> HOME</a>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to='/testseries'> TEST SERIES</NavLink>
+                                    <a className="nav-link" id='#aboutus' onClick={this.scrollTo}> ABOUT US</a>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to='/mentorship'> MENTORSHIP</NavLink>
+                                    <a className="nav-link" id='#mainproj1' onClick={this.scrollTo}> EVOKE</a>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link"  to='/josaa'> COUNSELLING</NavLink>
+                                    <a className="nav-link"  id='#pastprojs' onClick={this.scrollTo}> PAST PROJECTS</a>
                                 </NavItem>
                                 <NavItem>
-                                    <NavLink className="nav-link" to='/tensorsexam'> TENSORS EXAM</NavLink>
+                                    <a className="nav-link" id='#contact' onClick={this.scrollTo}> CONTACT US</a>
                                 </NavItem>
                             </Nav>
                         </Collapse>

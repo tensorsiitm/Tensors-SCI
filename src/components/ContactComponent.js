@@ -1,28 +1,51 @@
-import React,{Component} from 'react';
+
+import React,{ useEffect} from 'react';
 import '../css/ContactComponent.css';
 
-class Contact extends Component{
-          
-        
+const Contacthome = (props) =>{
 
-    
-    render(){
-        return(
-            <React.Fragment>
-            <div className='row contactbg' >
-            <div className="col contact">
-            <div className="row "><h1>Contact Us</h1></div>
-            <div className="row">
-            <p align="justify" >
-            The annual Tensors mock JEE examination is the most awaited end-of-the-year JEE examination in all major coaching institutes in South India. The questions papers are designed and conducted by IITians who have demonstrated their skill in cracking the JEE. There are two three-hour-long examinations for the JEE Mains and Advanced respectively.       
-            The annual Tensors mock JEE examination is the most awaited end-of-the-year JEE examination in all major coaching institutes in South India. The questions papers are designed and conducted by IITians who have demonstrated their skill in cracking the JEE. There are two three-hour-long examinations for the JEE Mains and Advanced respectively.       
-            </p>
-            </div>
-            </div>
-            <div className="col"></div>
-            </div>
-            </React.Fragment>
-        )
-    }
+
+      const contactHandleScroll = () => {
+        const curpos = window.scrollY;
+        const h1 = document.getElementById('home').clientHeight;
+        const h2 = document.getElementById('aboutus').clientHeight;
+        const h3 = document.getElementById('mainproj1').clientHeight;
+        const h4 = document.getElementById('pastprojs').clientHeight;
+        const h5 = document.getElementById('contact').clientHeight;
+
+        if ((curpos < (h1 + h2 + h3 + h4 - h5))){
+          document.getElementById("pastprojs").style.position = "relative";
+          document.getElementById("pastprojs").style.zIndex = 3;
+          //document.getElementById("mainproj1").style.display = "block";
+          //document.getElementById("mainproj1dummy").style.height = 0;
+        }
+        else{
+          console.log("reachednow");
+          document.getElementById("pastprojs").style.position = "sticky";
+          document.getElementById("pastprojs").style.zIndex = 3;
+          document.getElementById("pastprojs").style.top = 0;
+          document.getElementById("pastprojs").style.left = 0;
+          //document.getElementById("pastprojs").style.transform = "translate(-50%,-50%)";
+          //document.getElementById("mainproj1dummy").style.height =`${h4}px`;
+        }
+
+      };
+      
+      useEffect(() => {
+          window.addEventListener('scroll', contactHandleScroll, { passive: true });
+      
+          return () => {
+              window.removeEventListener('scroll', contactHandleScroll);
+          };
+      }, []);
+
+  return (
+    <div className="row contactrow" id="contact">
+    <div className="col h-100">
+    <div className="contactcircle1"></div>
+    </div>
+    </div>
+  )
+
 }
-export default Contact;
+export default Contacthome;
