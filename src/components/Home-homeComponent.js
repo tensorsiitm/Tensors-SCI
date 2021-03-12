@@ -22,6 +22,15 @@ class Homehome extends Component{
             componentWillUnmount() {
               window.removeEventListener('scroll', this.listenToScroll)
             }
+
+            scrollToAbout = () => {
+
+              window.scrollTo({
+                  top:document.getElementById('aboutus').offsetTop,
+                  behavior: 'smooth',
+              })
+              
+          }
                   
             listenToScroll = () => {
                         const scrollTop = window.scrollY;
@@ -40,6 +49,7 @@ class Homehome extends Component{
                       if (currentScrollPos > 50 ) {
                         this.setState({ opacityt: "0"
                                      })
+                        //this.scrollToAbout();             
                       } 
                       else {
                         this.setState({ opacityt: "1"  
@@ -47,12 +57,13 @@ class Homehome extends Component{
                       }
                       if(currentScrollPos+20 > maxScroll){
                         this.setState({ display: "none",    
-                                     }) 
+                                     })
+                                     document.getElementById("navbar").style.backgroundColor="#9cff62" 
                       }
                       else{
                         this.setState({ display: "block",    
                                      })
-                                     document.getElementById("navbar").style.backgroundColor="none"; 
+                                     document.getElementById("navbar").style.backgroundColor="transparent"; 
                       }
                      
                     }
@@ -101,6 +112,8 @@ class Homehome extends Component{
             </menu>
           
           </div>
+
+          <div className="downbtn"></div>
 
             </div>
             

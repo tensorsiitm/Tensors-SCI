@@ -15,6 +15,7 @@ class Abouthome extends Component{
         window.removeEventListener('scroll', this.listenToScroll)
       }
 
+
       listenToScroll = () => {
       let currentScrollPos = window.pageYOffset;
       let maxScroll =  window.innerHeight;
@@ -24,7 +25,7 @@ class Abouthome extends Component{
       }
       else{
         this.setState({ opacitya: "0",    
-                     }) 
+                     })            
       }
       }
 

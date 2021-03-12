@@ -13,7 +13,7 @@
 
  .circle1{
     border-radius: 50%;
-    box-shadow: 0px 0px 0px 7.8vw #9cff62;
+    box-shadow: 0px 0px 0px 7.8vw black;
     width:110%;
     position: absolute;
     top: 150%;
@@ -29,26 +29,40 @@
     position: absolute;
     top: 150%;
     left: 50%;
-    background-color: #9cff62;
+    background-color: black;
     transform: translate(-50%, -50%); 
     z-index: 3;
 }
 
 .circle3{
     border-radius: 50%;
-    box-shadow: 0px 0px 0px .6vw #009137;
-    width:39%;
+    box-shadow: 0px 0px 0px .2vw #9cff62;
+    width:9%;
     position: absolute;
-    top: 150%;
+    top: 90%;
     left: 50%;
     background-color: none;
     transform: translate(-50%, -50%); 
-    z-index: 3;
+    z-index: 4;
+    color: #9cff62;
+    height: 9vw;
+    font-family:'Pacifico-Regular';
+    text-align: center;
+    font-size: 2vw;
+    padding-top: 2vw;
+    padding-right: 2vw;
+    padding-left: 1vw;
+}
+
+.circle3:hover{
+  color: black;
+  background-color: #ccff33;
+  cursor: pointer;
 }
 
 .circle4{
     border-radius: 50%;
-    box-shadow: 0px 0px 0px .6vw #009137;
+    box-shadow: 0px 0px 0px .2vw #9cff62;
     width:70%;
     position: absolute;
     top: 150%;
@@ -56,6 +70,42 @@
     background-color: none;
     transform: translate(-50%, -50%); 
     z-index: 3;
+}
+
+.circle5{
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px 1.6vw black;
+  width:109%;
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  background-color: none;
+  transform: translate(-50%, -50%); 
+  z-index: 3;
+}
+
+.circle6{
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px .2vw #9cff62;
+  width:109%;
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  background-color: none;
+  transform: translate(-50%, -50%); 
+  z-index: 3;
+}
+
+.circle7{
+  border-radius: 50%;
+  box-shadow: 0px 0px 0px .2vw #9cff62;
+  width:126%;
+  position: absolute;
+  top: 150%;
+  left: 50%;
+  background-color: none;
+  transform: translate(-50%, -50%); 
+  z-index: 3;
 }
 
 
@@ -72,17 +122,46 @@
     padding-top: 100%;
 }
 
-.circle3:before{
+/* .circle3:before{
     content: "";
     display: block;
     padding-top: 100%;
-}
+} */
 
 .circle4:before{
     content: "";
     display: block;
     padding-top: 100%;
 }
+
+.circle5:before{
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.circle6:before{
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.circle7:before{
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+/* .bottomline{
+  height: 2vw;
+  width:52%;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  background-color: black;
+  transform: translate(-50%, -50%); 
+  z-index: 3;
+} */
 
 .paletteouter{
     position: absolute;
@@ -169,13 +248,16 @@
 
   .innerdiv h3{
       font-size: 1.8vw;
+      filter:brightness(30%);
   }
 
   .innerdiv p{
     font-size: 1.1vw;
+    filter:brightness(30%);
 } 
     .innerdiv h5{
         font-size: 1.2vw;
+        filter:brightness(30%);
     }
 
 .innerdiv{
@@ -189,45 +271,46 @@
     padding-bottom: 12vw;
     color: white;
     background-size: cover;
+    filter:brightness(30%);
 }
 
  .nextbtn{
     position: absolute;
-    top:50%;
-    right:16%;
+    top:85%;
+    right:32%;
     width:4vw;
     height: 4vw;
-    background-color: #f1fcb6;
-    color: black;
-    z-index: 3;
-    border: 4px solid black;
+    color: #9cff62;
+    z-index: 5;
     cursor: pointer;
-    border-radius: 50%;
-}
-
-.nextbtn i{
     font-size: 4vw;
-    transform: rotate(62deg)
 }
 
+.nextbtn:hover{
+  cursor: pointer;
+  color: #ccff33;
+}
 
 .prevbtn{
-    position: absolute;
-    top:50%;
-    left:16%;
-    width:4vw;
-    height: 4vw;
-    background-color: #f1fcb6;
-    color: black;
-    border: 4px solid black;
-    z-index: 3;
-    cursor: pointer;
-    border-radius: 50%;
+  position: absolute;
+  top:85%;
+  left:32%;
+  width:4vw;
+  height: 4vw;
+  color: #9cff62;
+  z-index: 5;
+  cursor: pointer;
+  font-size: 4vw;
 }
 
-.prevbtn i{
-    font-size: 4vw;
-    transform: rotate(-62deg);  
-} 
+.prevbtn:hover{
+cursor: pointer;
+color: #ccff33;
+}
+
+.arc-text{
+  font-size:5vw;
+  color: #9cff62;
+}
 
 

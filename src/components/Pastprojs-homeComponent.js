@@ -59,6 +59,7 @@ const items = [
   ];
 
 const Pastprojshome = (props) =>{
+  
 
 
 
@@ -141,59 +142,94 @@ else{
       
       useEffect(() => {
           window.addEventListener('scroll', handleScroll, { passive: true });
-      
+          window.addEventListener('scroll', arctext);
           return () => {
               window.removeEventListener('scroll', handleScroll);
           };
+
       }, []);
+
+      
+   const arctext =()=>{
+         var txt = "OUR PAST PROJECTS ";
+         var radius = 1000;
+         txt = txt.split("");    
+         var deg = 70 / txt.length,
+          origin = -32;    
+         txt.forEach((ea) => {
+           ea = `<p style='height:${radius}px;position:absolute;transform:rotate(${origin}deg);transform-origin:0 100%;z-index:4; left:50%; top:20%'>${ea}</p>`;
+           document.getElementById("test").innerHTML += ea;
+           origin += deg;
+         });
+       }
+
+     const scrollToContact = () => {
+
+        window.scrollTo({
+            top:document.getElementById('contact').offsetTop,
+            behavior: 'smooth',
+        })
+        
+    }
+
+
 
   return (
     <React.Fragment>
     <div className="row pastprojrow" id="pastprojs">
     <div className="col h-100">
-    <div className="circle1"></div>
+    <div className="arc-text" id="test" style={{color:`${Rotate ? '#363636' : '#9cff62' }`}}></div>  
+    <div className="circle1">
+    </div>
     <div className="circle2"></div>
-    <div className="circle3"></div>
+    <div className="circle3" onClick={scrollToContact}>
+    Contact Us
+    </div>
     <div className="circle4"></div>
+    <div className="circle5"></div>
+    <div className="circle6"></div>
+    <div className="circle7"></div>
+    <div className="bottomline"></div>
 
-    <div className="nextbtn" onClick={next}><i class="fa fa-arrow-circle-right"></i></div>
-    <div className="prevbtn" onClick={prev}><i class="fa fa-arrow-circle-left"></i></div>
+    <div className="nextbtn" onClick={next}><i class="fa fa-arrow-right"></i></div>
+    <div className="prevbtn" onClick={prev}><i class="fa fa-arrow-left"></i></div>
+
 
     <div className="paletteouter">
     <div className={Rotate ? Rotate : "palette"} onAnimationEnd={onAnimationEnd} >
     <div className="color1">
-    <div className="innerdiv" style={{backgroundImage:`url(${c5.src})`, opacity:.5}}>
-    <h3 style={{ opacity:.5}}>{c5.altText}</h3>
-    <p style={{ opacity:.5}}>{c5.text}</p>
-    <h5 style={{ opacity:.5}}>{c5.caption}</h5>
+    <div className="innerdiv" style={{backgroundImage:`url(${c5.src})`}}>
+    <h3>{c5.altText}</h3>
+    <p>{c5.text}</p>
+    <h5>{c5.caption}</h5>
     </div>
     </div>
     <div className="color2">
-    <div className="innerdiv" style={{backgroundImage:`url(${c1.src})`, opacity:1}}>
-    <h3 style={{ opacity:1}}>{c1.altText}</h3>
-    <p style={{ opacity:1}}>{c1.text}</p>
-    <h5 style={{ opacity:1}}>{c1.caption}</h5>
+    <div className="innerdiv" style={{backgroundImage:`url(${c1.src})`, filter:`brightness(${Rotate ? 30 : 100}%)`}}>
+    <h3 style={{filter:`brightness(${Rotate ? 30 : 100}%)`}}>{c1.altText}</h3>
+    <p style={{filter:`brightness(${Rotate ? 30 : 100}%)`}}>{c1.text}</p>
+    <h5 style={{filter:`brightness(${Rotate ? 30 : 100}%)`, color:"white"}}>{c1.caption}</h5>
     </div>
     </div>
     <div className="color3">
-    <div className="innerdiv" style={{backgroundImage:`url(${c3.src})`, opacity:.5}}>
-    <h3 style={{ opacity:.5}}>{c3.altText}</h3>
-    <p style={{ opacity:.5}}>{c3.text}</p>
-    <h5 style={{ opacity:.5}}>{c3.caption}</h5>
+    <div className="innerdiv" style={{backgroundImage:`url(${c3.src})`}}>
+    <h3>{c3.altText}</h3>
+    <p>{c3.text}</p>
+    <h5>{c3.caption}</h5>
     </div>
     </div>
-    <div className="color4">
-    <div className="innerdiv" style={{backgroundImage:`url(${c2.src})`, opacity:.5}}>
-    <h3 style={{ opacity:.5}}>{c2.altText}</h3>
-    <p style={{ opacity:.5}}>{c2.text}</p>
-    <h5 style={{ opacity:.5}}>{c2.caption}</h5>
+    <div className="color4"> 
+    <div className="innerdiv" style={{backgroundImage:`url(${c2.src})`}}>
+    <h3>{c2.altText}</h3>
+    <p>{c2.text}</p>
+    <h5>{c2.caption}</h5>
     </div>
     </div>
     <div className="color5">
-    <div className="innerdiv" style={{backgroundImage:`url(${c4.src})`, opacity:.5}}>
-    <h3 style={{ opacity:.5}}>{c4.altText}</h3>
-    <p style={{ opacity:.5}}>{c4.text}</p>
-    <h5 style={{ opacity:.5}}>{c4.caption}</h5>
+    <div className="innerdiv" style={{backgroundImage:`url(${c4.src})`}}>
+    <h3>{c4.altText}</h3>
+    <p>{c4.text}</p>
+    <h5>{c4.caption}</h5>
     </div>
     </div>
     </div>

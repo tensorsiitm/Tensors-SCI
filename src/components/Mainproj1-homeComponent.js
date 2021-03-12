@@ -14,7 +14,7 @@ class Mainproj1home extends Component{
             <div className="col">
             <div className="row">
             <div className="col-5 offset-1 evokedesc">
-            <div className="row "><h1>Evoke</h1></div>
+            <div className="row "><h1>Tensors Evoke</h1></div>
             <div className="row">
             <p align="justify" >
             The annual Tensors mock JEE examination is the most awaited end-of-the-year JEE examination in all major coaching institutes in South India. The questions papers are designed and conducted by IITians who have demonstrated their skill in cracking the JEE. There are two three-hour-long examinations for the JEE Mains and Advanced respectively.       
