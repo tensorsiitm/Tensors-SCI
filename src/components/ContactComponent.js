@@ -50,17 +50,10 @@ const Contacthome = (props) =>{
         }
 
       };
-      
-      useEffect(() => {
-          window.addEventListener('scroll', contactHandleScroll, { passive: true });
-      
-          return () => {
-              window.removeEventListener('scroll', contactHandleScroll);
-          };
-      }, []);
+
 
   return (
-    <div className="row contactrow" id="contact">
+    <div className="row contactrow comp">
     <div className="col h-100">
     <div className="contactcircle1"></div>
     <div className="contcontents">

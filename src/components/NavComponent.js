@@ -48,7 +48,10 @@ class Top extends Component{
                                     <a className="nav-link" id='#aboutus' onClick={this.scrollTo}> ABOUT US</a>
                                 </NavItem>
                                 <NavItem>
-                                    <a className="nav-link" id='#mainproj1' onClick={this.scrollTo}> EVOKE</a>
+                                    <a className="nav-link" id='#tenment' onClick={this.scrollTo}> EDU</a>
+                                </NavItem>
+                                <NavItem>
+                                <a className="nav-link" id='#decov' onClick={this.scrollTo}> DECOV</a>
                                 </NavItem>
                                 <NavItem>
                                     <a className="nav-link"  id='#pastprojs' onClick={this.scrollTo}> PAST PROJECTS</a>

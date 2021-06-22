@@ -9,7 +9,6 @@
 
 .story{
     padding-top: 200px;
-
 }
 
 .story h1{
@@ -401,36 +400,6 @@
   .six .content-container h2::after {
    background: var(--color-6);
   }
-  
-  /* media */
-  @media (max-width: 992px) {
-    .graphic-container {
-      margin: 50px 0;
-    }
-    .center-circles-container {
-      overflow: hidden;
-      overflow-x: scroll;
-      width: 1300px;
-    }
-    .double {
-      flex-direction: row;
-    }
-    .double:nth-child(even) {
-      flex-direction: row;
-    }
-    .two {
-      transform: translateX(0px);
-    }
-    .three {
-      transform: translateX(0px);
-    }
-    .four {
-      transform: translateX(0px);
-    }
-    .five {
-      transform: translateX(0px);
-    }
-  }
 
   .bgtext{
     position: absolute;
@@ -442,3 +411,64 @@
     opacity: 0.2;
     line-height: 170px;
   }
+  
+  /* media */
+  @media (max-width: 1199px) {
+
+  .story{
+    padding-top: 50px;
+    padding-bottom: -10px;
+  }
+  
+  .story h1{
+    padding-bottom: 10px;
+  }
+
+  .center-circles-container {
+    padding-top: 0;
+  }
+  
+  .mobile-values-title{
+    padding-top: 30px;
+  }
+  }
+
+  @media (max-width: 767px) {
+
+    .mobile-container{
+      text-align: center;
+    }
+
+    .mobile-circle {
+      width: 200px;
+      height: 200px;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%, 0); 
+      background: #fff;
+      border-radius: 50%;
+      place-items: center;
+      box-shadow: inset 0 0 0 20px #20e020, inset 0px 0px 12px 20px #989898;
+    }
+
+    .mobile-circle-container{
+      height: 200px;
+      margin-bottom: 70px;
+    }
+
+    .mobile-content-container{
+      margin-bottom: 70px;
+    }
+    /* .mobile-container .row{
+      padding-bottom: 70px;
+    } */
+
+    .icon{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+  }
+

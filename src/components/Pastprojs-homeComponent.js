@@ -141,13 +141,9 @@ else{
       };
       
       useEffect(() => {
-          window.addEventListener('scroll', handleScroll, { passive: true });
-          window.addEventListener('scroll', arctext);
-          return () => {
-              window.removeEventListener('scroll', handleScroll);
-          };
+        window.addEventListener('scroll', arctext);
 
-      }, []);
+    }, []);
 
       
    const arctext =()=>{
@@ -157,7 +153,7 @@ else{
          var deg = 70 / txt.length,
           origin = -32;    
          txt.forEach((ea) => {
-           ea = `<p style='height:${radius}px;position:absolute;transform:rotate(${origin}deg);transform-origin:0 100%;z-index:4; left:50%; top:20%'>${ea}</p>`;
+           ea = `<p style='height:${radius}px;position:absolute;transform:rotate(${origin}deg);transform-origin:0 100%;z-index:4; left:50%; top:16%'>${ea}</p>`;
            document.getElementById("test").innerHTML += ea;
            origin += deg;
          });
@@ -175,8 +171,7 @@ else{
 
 
   return (
-    <React.Fragment>
-    <div className="row pastprojrow" id="pastprojs">
+    <div className="row pastprojrow comp">
     <div className="col h-100">
     <div className="arc-text" id="test" style={{color:`${Rotate ? '#363636' : '#9cff62' }`}}></div>  
     <div className="circle1">
@@ -237,7 +232,6 @@ else{
 
     </div>
     </div>
-    </React.Fragment>
   )
 
 }

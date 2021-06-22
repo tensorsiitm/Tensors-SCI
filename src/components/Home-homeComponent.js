@@ -1,7 +1,7 @@
 import React,{useState, useEffect} from 'react';
 import tensors from "../assets/images/tensors.png";
 import '../css/Home-homeComponent.css';
-
+import bgvideo from "../assets/bgvideo.mp4";
 
 
 const Homehome = (props) => {
@@ -13,18 +13,18 @@ const Homehome = (props) => {
   const [circleAnimation, setcircleAnimation] = useState('greenoverlay1');
 
          const scrollToAbout = () => {
-           setcircleAnimation('greenoverlay1 circleIn')
+         //  setcircleAnimation('greenoverlay1 circleIn')
               window.scrollTo({
-                //  top:document.getElementById('aboutus').offsetTop +10 ,
-                  behavior: 'smooth',
+                  top:document.getElementById('aboutus').offsetTop,
+                 // behavior: 'smooth',
               })
           }
 
         const scrollToHome = () => {
-          setcircleAnimation('greenoverlay1 circleOut')
+         // setcircleAnimation('greenoverlay1 circleOut')
             window.scrollTo({
                 top:document.getElementById('home').offsetTop,
-                behavior: 'smooth',
+               // behavior: 'smooth',
             })
         }
 
@@ -33,126 +33,53 @@ const Homehome = (props) => {
               };
 
 
-      // state = {
-      //          // circlerad:1700,
-      //           opacityt: '1',
-      //           display:"block",
-      //           active: false,
-      //           currentDiv: "home"
-      //       }
-      //       componentDidMount() {
-      //         if (typeof window !== "undefined") {
-      //         window.addEventListener('scroll', this.listenToScroll)
-      //         }
-      //       }
-            
-      //       componentWillUnmount() {
-      //         window.removeEventListener('scroll', this.listenToScroll)
-      //       }
-
-
-
         const listenToScroll = () => {
           let currentScrollPos = window.pageYOffset;
           let maxScroll =  window.innerHeight;
                       console.log(currentScrollPos)
                       console.log(maxScroll)
                       console.log(currentDiv)
-                      if (currentScrollPos > 20 && currentScrollPos < maxScroll && currentDiv == "home") {
-                        scrollToAbout();   
-                        setopacityT('0');       
-                      } 
-                      else {
-                        setopacityT('1');
-                      }
-                      if(currentScrollPos > maxScroll){
-                        setdisplay("none"); 
+                      if(currentScrollPos + 5> maxScroll){
                         document.getElementById("navbar").style.backgroundColor="#9cff62";
                         setcurrentDiv("about");                            
                       }
-                      else{
-                        setdisplay("block");
-                        document.getElementById("navbar").style.backgroundColor="transparent"; 
+                      else if(currentScrollPos == 0){
+                        document.getElementById("navbar").style.backgroundColor="transparent";
+                        setopacityT('1');                          
                       }
+                      else if (currentScrollPos > 20 && currentScrollPos < maxScroll && currentDiv == "home") {
+                        //scrollToAbout();   
+                        setopacityT('0');       
+                      } 
                       if (currentScrollPos < maxScroll && currentDiv == "about") {
-                        scrollToHome();   
+                        //scrollToHome();   
                         setopacityT('1');         
                       }
-                      if (currentScrollPos < 20){
-                        setcurrentDiv("home"); 
-                      } 
+                      // if (currentScrollPos < 20){
+                      //   setcurrentDiv("home"); 
+                      // } 
                      
                     }
-                  
-      //       listenToScroll = () => {
-      //                   // const scrollTop = window.scrollY;
-      //                   // const h1 = document.getElementById('home').clientHeight;
-      //                   // const cr = (1.13-(scrollTop/h1))*100;
-      //                   // console.log(scrollTop/h1 + "perc")
-      //                   // console.log(cr + "rad")
-      //                   // document.getElementById("go1").style.width = `${cr}%`;
-      //                   // minrad = 0,
-      //                   // circlerad = Math.max(minrad, 1750 - 2.3*scrollTop);
-      //                   // this.setState({
-      //                   //         circlerad: circlerad
-      //                   // });
-      //                 let currentScrollPos = window.pageYOffset;
-      //                 let maxScroll =  window.innerHeight;
-      //                 if (currentScrollPos > 20 && this.state.currentDiv == "home") {
-      //                   this.scrollToAbout();   
-      //                   this.setState({ opacityt: "0",
-      //                                   currrentDiv : "about"
-      //                                })
-                                  
-      //                 } 
-      //                 else {
-      //                   this.setState({ opacityt: "1"  
-      //                                })
-      //                 }
-      //                 if(currentScrollPos < maxScroll && this.state.currentDiv == "about"){
-      //                   this.scrollToHome();
-      //                   this.setState({ display: "none",
-      //                                   currentDiv: "home"    
-      //                                })
-      //                                document.getElementById("navbar").style.backgroundColor="#9cff62" 
-      //                 }
-      //                 else{
-      //                   this.setState({ display: "block",    
-      //                                })
-      //                                document.getElementById("navbar").style.backgroundColor="transparent"; 
-      //                 }
-                     
-      //               }
 
-      useEffect(() => {
-        window.addEventListener('scroll', listenToScroll, { passive: true });
-        return () => {
-            window.removeEventListener('scroll', listenToScroll);
-        };
+                    useEffect(() => {
+                      window.addEventListener('scroll', listenToScroll, { passive: true });
+                      return () => {
+                          window.removeEventListener('scroll', listenToScroll);
+                      };
 
-    }, []);
-
-        
+                  }, []);
+ 
+ 
         return(
-            
-            <React.Fragment>
-            <div class="slideshow" style={{ display: `${display}`}}>
-            <ul>
-            <li><span></span></li>
-            <li><span></span></li>
-            <li><span></span></li>
-            <li><span></span></li> 
-            <li><span></span></li>
-            </ul>
-            </div>
-            <div className={circleAnimation} id="go1" style={{ display: `${display}`}}></div>
+
+          <React.Fragment>
+          <div className={circleAnimation} id="go1" style={{ display: `${display}`}}></div>
             <div className="row darkoverlay" id="home">
-            <div className="col text-center">
-            <div className="row tensors">
-            <div className="col h-30" style={{ opacity: `${opacityT}`}}>
+            <video autoPlay muted loop id="myVideo">
+            <source src={bgvideo} type="video/mp4" />
+          </video>
+            <div className="col tensors text-center" style={{ opacity: `${opacityT}`}}>
             <img src={tensors} className="img-fluid"/>
-            </div>
-            </div>
             </div>
 
             <div id="circularMenu" className={active ? 'circular-menu active': 'circular-menu'} style={{ opacity: `${opacityT}`}}>
@@ -173,8 +100,8 @@ const Homehome = (props) => {
           <div className="downbtn"></div>
 
             </div>
-            
             </React.Fragment>
+
         )
 
 }

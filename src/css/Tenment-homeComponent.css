@@ -1,0 +1,195 @@
+.tenmentbg{
+    z-index: 1;
+    overflow: hidden;
+}
+
+.story{
+    padding-top: 200px;
+}
+
+.story h1{
+    font-family:'Pacifico-Regular';
+    font-size: 48px;
+}
+
+.accordion-wrapper body {
+  color: rgb(144, 236, 24);
+  background: rgb(144, 236, 24,.1);
+  padding: 0 1em 1em;
+  font-family: 'Open Sans', sans-serif;
+}
+.accordion-wrapper h1{
+  text-align:center;
+}
+.accordion-wrapper input {
+  position: absolute;
+  opacity: 0;
+  z-index: -1;
+}
+.accordion-wrapper {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 4px -2px rgba(0, 0, 0, 0.5);
+  width: 600px;
+  margin:0 auto;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+.accordion {
+  width: 100%;
+  color: black;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+.accordion:last-child{
+  margin-bottom: 0;
+}
+.accordion-label {
+  display: flex;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  padding: 16px;
+  background: rgb(144, 236, 24,.8);
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 20px;
+}
+.accordion-label:hover {
+  background: rgb(144, 236, 24,1);
+}
+.accordion-label::after {
+  content: "\276F";
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.accordion-content {
+  max-height: 0;
+  padding: 0 16px;
+  color: black;
+  background: white;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.accordion-content p{
+  margin: 0;
+  color: black;
+  font-size: 18px;
+}
+input:checked + .accordion-label {
+  background: rgb(144, 236, 24,1);
+}
+input:checked + .accordion-label::after {
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+input:checked ~ .accordion-content {
+  max-height: 100vh;
+  padding: 16px;
+}
+
+  /* .bgtext{
+    position: absolute;
+    padding-top: 150px;
+    padding-left: 20px;
+    font-size: 200px;
+    text-shadow: 0 -4px 3px rgb(255, 255, 255, 0.3), 0 3px 4px rgba(0, 0, 0, 0.2);
+    color: rgb(104, 170, 104);
+    opacity: 0.2;
+    line-height: 170px;
+  }
+
+  .initiatives-heading h1{
+    font-family:'Pacifico-Regular';
+    text-align: center;
+    padding-left: 55%;
+    transform: translate(-25%,0);
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+
+  .mentfeatures{
+    background-color: #898994;
+opacity: 1;
+background: radial-gradient(circle, transparent 20%, #898994 20%, #898994 80%, transparent 80%, transparent), radial-gradient(circle, transparent 20%, #898994 20%, #898994 80%, transparent 80%, transparent) 22.5px 22.5px, linear-gradient(#5ff745 1.8px, transparent 1.8px) 0 -0.9px, linear-gradient(90deg, #5ff745 1.8px, #898994 1.8px) -0.9px 0;
+background-size: 45px 45px, 45px 45px, 22.5px 22.5px, 22.5px 22.5px;
+  }
+
+  .mentfeatures .wrapper {
+    perspective: 800px;
+    padding-bottom: 6%;
+  }
+  
+  .mentfeatures .container {
+    width: 300px;
+    height: 500px;
+    transition: .5s all ease;
+    transform: rotateX(60deg) scale(0.7);
+    box-shadow: 0px 20px 50px #555;
+    animation: entry 1s linear 1;
+  }
+  
+  #c0 {
+    /* background: linear-gradient(to bottom, #70ee08 30%, #a1f381 100%); 
+    z-index: 300;
+    box-shadow: 0px 20px 100px #555;
+  }
+  
+  .mentfeatures .container:hover {
+    cursor: pointer;
+    transform: rotate(0deg) scale(1) translateY(10px);
+    transition: .5s all ease;
+    z-index: 400;
+  }
+  
+  .mentfeatures .image {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    padding: 5%;
+    height: 40%;
+    background: linear-gradient(to top, #8efc80 30%, #61ee03 100%);
+  }
+
+  .mentfeatures .story {
+    position: absolute;
+    top: 40%;
+    left: 0%;
+    height: 60%;
+    width: 100%;
+    background: linear-gradient(to bottom, #79fc74 0%, #49f514 40%);
+    z-index: 30;
+  }
+  
+  .mentfeatures .info {
+    position: absolute;
+    top: 10%;
+  }
+  
+  .mentfeatures h3 {
+    text-align: center;
+    color: black;
+    letter-spacing: 2px;
+  }
+  
+  .mentfeatures p {
+    font-size: 14px;
+    color: black;
+    padding: 0px 20px 20px 20px;
+    line-height: 150%;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  
+  @keyframes entry {
+    0% {
+      top: -20%;
+      opacity: 0.1;
+    }
+    100% {
+      top: 0%;
+    }
+  } */
